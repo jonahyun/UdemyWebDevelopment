@@ -1,11 +1,3 @@
-// Git and Github Setup
-
-// Git Setup / Use
-// 1. Download Git (Homebrew)
-// 2. Sign up / Login to Github
-// 3. Setup SSH for the computer you are using
-// 4. Start using git including you can clone existing project or start new git project by initilizing Git.
-
 // Note setting up Express Server with Node
 // 1. Download Node (That comes with package manager)
 // 2. Setup Express "npm install express --save". This is global setup, you can do it from any directory
