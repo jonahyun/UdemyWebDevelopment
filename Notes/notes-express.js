@@ -1,9 +1,11 @@
 // Note setting up Express Server with Node
 // 1. Download Node (That comes with package manager)
 // 2. Setup Express "npm install express --save". This is global setup, you can do it from any directory
-// 3. Initialize new npm project: "npm init" (from new project folder)
-// 4. Setup express "npm install express"
-// 5. On your server.js file, require express and setup route. example below.
+// 3. Install Nodemon 'Sudo npm install -g nodemon"
+// 4. Initialize new npm project: "npm init" (from new project folder)
+// 5. Setup express "npm install express"
+// 6. Setup body-parser for forms - "npm install body-parser"
+// 6. On your server.js file, require express and setup route. example below.
 
 const express = require("express");
 const bodyParser = require("body-parser");
@@ -25,4 +27,4 @@ app.post("/", function(req,res){
 // Start server
 app.listen(3000, function(){
     console.log("server is running on 3000 bitches!");
-});
+});``
