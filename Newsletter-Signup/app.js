@@ -70,7 +70,7 @@ app.post("/failure", function(req, res) {
 
 })
 
-app.listen(3000, function(req, res){
+app.listen(process.env.PORT || 3000, function(req, res){
   console.log("The server is alive on 3000");
 });
 
