@@ -2,6 +2,9 @@ const express = require("express");
 const app = express();
 const bodyParser = require("body-parser"); // use to post form data
 const https = require("https"); 
+require('dotenv').config();
+
+// console.log(process.env); // Check envirnoment variables
 
 app.use(bodyParser.urlencoded({extended:true})); // For nested 
 app.use(express.static("public")); //allow to use static css and images folder
@@ -40,7 +43,7 @@ app.post("/", function(req, res) {
 
   const options = {
     method: "POST",
-    auth: "jona:b10d3a98f29e9a802fa60ee057c19304-us8"
+    auth: process.env.API_KEY
   }
 
   const request = https.request(url, options, function(response) {
@@ -71,9 +74,3 @@ app.listen(3000, function(req, res){
   console.log("The server is alive on 3000");
 });
 
-// API Key
-// b10d3a98f29e9a802fa60ee057c19304-us8
-
-
-// List ID
-// 5f23e46090
