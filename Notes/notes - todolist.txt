@@ -1,0 +1,21 @@
+To Do List App V1 Notes
+
+Setup
+- Initialize git 
+- Setup gitignore file (ex. DS_Store, .env, secret.txt, node_module)
+- Run ‘npm init’ to initialize project
+- Run ‘npm install express body-parser ejs request'
+- Public - if you want to have Public Folder (images, css, etc) add:
+		app.use(express.static("public")); 
+- 
+- Create files index.html, app.js, list.ejs
+
+Ejs
+- Views - using ejs 'app.set('view engine', 'ejs')
+ 
+
+Scope 
+- Const - value can not changed
+- Var and Let - value can be changed
+- Var and Let - global vs local variable are the mostly the same
+- Var is different when you are used in For and while loops, the var variables become global.
