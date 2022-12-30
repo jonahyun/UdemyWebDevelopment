@@ -1,49 +1,37 @@
-const express = require("express");
-const app = express();
+const express = require('express');
 const bodyParser = require("body-parser");
+const app = express();
+const date = require(__dirname + "/date.js");
 
-
+app.use(express.static("public"));
+app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({extended:true}));
 
-app.set('view engine', 'ejs');
-app.use(express.static("public"));
+const tasks = ["Buy Food", "Cook Food", "Eat"];
+const workTasks = ["programming", "fixing house"];
 
-var tasks = ["Take out the trash", "study programming"];
+
 app.get("/", function(req, res){
-  var today = new Date();
-  var options = {
-    weekday: "long",
-    day: "numeric",
-    month: "numeric",
-    year: "numeric"
-  }
-  var day = today.toLocaleDateString("en-US", options);
+  const day = date.getDay();
+  res.render("todo", {listTitle: day, newTasks: tasks});
+});
 
-  res.render("todo", {newTasks: tasks, myDay: day});
+
+app.get("/work", function(req, res){
+  res.render("todo", {listTitle: "Work", newTasks: workTasks})
 });
 
 app.post("/", function(req, res) {
-  var task = req.body.newTask;
-  tasks.push(task);
-  res.redirect("/");
+  const task = req.body.newTask;
+  if(req.body.button === "Work") {
+    workTasks.push(task);
+    res.redirect("/work");
+  } else {
+    tasks.push(task);
+    res.redirect("/");
+  }
 });
 
-
-
-
-
-
-
-
-
-
-
-
-// app.post("/", function(req, res) {
-//   var task = req.body.newTask;
-//   tasks.push(task);
-//   res.redirect("/");
-// });
 
 
 app.listen(4000, function(req, res) {
