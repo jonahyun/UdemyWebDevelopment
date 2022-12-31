@@ -1,6 +1,5 @@
 const express = require('express');
 const bodyParser = require("body-parser");
-const getDate = require('./date');
 const app = express();
 const date = require(__dirname + "/date.js");
 
@@ -8,18 +7,18 @@ app.use(express.static("public"));
 app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({extended:true}));
 
-let items = ["Buy Food", "Cook Food", "Eat"];
-let workItems = ["programming", "fixing house"];
+const items = ["Buy Food", "Cook Food", "Eat"];
+const workItems = ["programming", "fixing house"];
 
 app.get("/", function(req, res){
   // res.sendFile(__dirname + "/index.html");
-  let day = date.getDay();
+  const day = date.getDay();
   res.render("list", {listTitle: day, newListItems: items}); //render - ejs function
 });
 
 app.post("/", function(req, res){
 
-  let item = req.body.newItem;
+  const item = req.body.newItem;
 
   if (req.body.list === "Work") {
     workItems.push(item);
@@ -36,8 +35,8 @@ app.get("/work", function(req, res){
 
 app.get("/about", function(req,res){
   res.render("about");
-})
-
+});
+ 
 app.listen(3000, function(req, res){
   console.log("The server is running on 3000");
 });
