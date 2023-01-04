@@ -1,0 +1,14 @@
+<a href="/">Home</a> | <a href="/work">Work</a>
+
+<h1><%= listTitle %></h1>
+<ul>
+
+ <% items.forEach(function(item) { %>
+    <li><%= item %></li>
+  <% }); %>
+  
+</ul>
+<form action="/" method="post">
+  <input type="text" name="newListItem">
+  <button type="submit" name="button" value="<%= listTitle %>">Add</button>
+</form>

@@ -1,0 +1,24 @@
+Database Explanation Video
+- https://www.udemy.com/course/the-complete-web-development-bootcamp/learn/lecture/12385614#questions/18744410
+- It breaks down Relational (MySQL) vs non replational database (MongoDB). 
+
+Mongodb
+Mongoddb Installation Summary 
+- You will need to instalation Homebrew first.
+- Mac - Community Edition 6:
+- https://www.youtube.com/watch?v=NLw7Tln6IeM 
+- https://www.mongodb.com/docs/manual/tutorial/install-mongodb-on-os-x/
+- After installation, on command prompt, Run mongosh - to run mongodb shell\
+- You can MongoDB Driver
+
+Mongoose
+- https://mongoosejs.com/
+- ODM - Object Document Mapper
+- Talk to MongoDB
+
+Terminal Commands
+- mongosh - open mongodb shell
+- exit - closes mongodb shell
+- Start Mongodb server - brew services start mongodb-community
+- Stop Mongodb server - brew services stop mongodb-community
+
