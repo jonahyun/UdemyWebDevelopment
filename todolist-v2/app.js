@@ -33,7 +33,7 @@ const item3 = new Item ({
   name: "Check House"
 });
 
-const defaultItems = [item1, items2, item3];
+const defaultItems = [item1, item2, item3];
 
 Item.insertMany(defaultItems, function(err){
   if (err) {
