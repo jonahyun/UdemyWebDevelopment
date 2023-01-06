@@ -1,6 +1,10 @@
 const express = require('express');
 const bodyParser = require("body-parser");
+const mongoose = require("mongoose");
+mongoose.set('strictQuery', false);
 const app = express();
+const_ = require("lodash");
+
 const date = require(__dirname + "/date.js");
 
 app.use(express.static("public"));
