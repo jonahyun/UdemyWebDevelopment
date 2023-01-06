@@ -25,18 +25,14 @@ const itemsSchema = new mongoose.Schema ({
 const Item = mongoose.model("Item", itemsSchema);
 
 const item1 = new Item ({
-  name: "Pickup Dog Food"
+  name: "Add Your Task"
 });
 
 const item2 = new Item ({
-  name: "Feed Pimple"
+  name: "Task Now"
 });
 
-const item3 = new Item ({
-  name: "Check House"
-});
-
-const defaultItems = [item1, item2, item3];
+const defaultItems = [item1, item2];
 
 // listSchema
 const listSchema = new mongoose.Schema({
