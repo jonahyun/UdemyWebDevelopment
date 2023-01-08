@@ -22,7 +22,7 @@ const itemsSchema = {
   name: String
 };
 
-// Create Items Modelrs
+// Create Items Model
 const Item = mongoose.model("Item", itemsSchema);
 
 // Create Item and Array
@@ -41,15 +41,12 @@ function insertDefaultItems() {
 }
 
 
-
-
-
 app.get("/", function(req, res) {
   
   // Reading Item Collection
   Item.find({}, function(err, results) {
     
-    // Checks to see if there are any 
+    // Checks to see if there are any items
     if(results.length === 0) {
       // if none, call insertItems() and redirect to home
       insertDefaultItems();
@@ -81,9 +78,12 @@ app.post("/", function(req, res){
       res.redirect("/" + listName);
     });
   };
+});
 
-
-
+app.post("/", function(req, res) {
+  const newToDoList = req.body.newToDoList;
+  const newToDoListButton = req.body.newToDoListButton;
+  
 
 });
 
@@ -125,7 +125,7 @@ const listSchema = {
 // Create List Model
 const List = mongoose.model("List", listSchema);
 
-
+// Custom Routing
 app.get("/:customListName", function(req, res){
   const customListName = _.capitalize(req.params.customListName);
   
@@ -146,12 +146,11 @@ app.get("/:customListName", function(req, res){
       };
     };
   });
-
 });
 
 
 
 
 app.listen(3030, function() {
-  console.log("Server started on port 3000");
+  console.log("Server started on port 3030");
 });
