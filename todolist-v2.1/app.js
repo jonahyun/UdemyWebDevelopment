@@ -80,10 +80,14 @@ app.post("/", function(req, res){
   };
 });
 
+const newLists = [];
+
 app.post("/", function(req, res) {
-  const newToDoList = req.body.newToDoList;
-  const newToDoListButton = req.body.newToDoListButton;
-  
+  const newList = req.body.newToDoList;
+
+  newLists.push(newList);
+  console.log(newLists);
+  // res.render("/", {newYesLists:newlists} )
 
 });
 
