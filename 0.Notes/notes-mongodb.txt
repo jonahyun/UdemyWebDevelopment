@@ -22,3 +22,9 @@ Terminal Commands
 - Start Mongodb server - brew services start mongodb-community
 - Stop Mongodb server - brew services stop mongodb-community
 
+
+App.js - Creating Mongoose DB w
+1. Open Connection
+2. Create Schema
+3. Create Model from Schema
+4. Create Documents based off of Model

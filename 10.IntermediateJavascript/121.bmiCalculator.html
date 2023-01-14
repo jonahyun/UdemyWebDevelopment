@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Code</title>
+</head>
+<body>
+<script>
+
+// function bmiCalculator(weight, height) {
+//  //   var bmi = Math.round(weight / (height ** 2)); alternate way
+//     var bmi = Math.round(weight / Math.pow(1.8,2));
+//     return bmi;
+// }
+
+// bmiCalculator(65, 1.8);
+
+
+
+function bmiCalculator (weight, height) {
+    var bmi = Math.round(weight /  (height ** 2));
+
+    if (bmi < 18.5) {
+     console.log("Your BMI is " + bmi + ", so you are underweight.");
+    } else if (bmi <= 18.5 || bmi <= 24.9) {
+     console.log("Your BMI is " + bmi + ", so you have normal weight");
+    } else {
+     console.log("Your BMI is " + bmi + ", so you are overweight");
+    }
+      
+ return bmi;
+
+}
+
+bmiCalculator(65,1.8);
+
+
+
+
+</script>
+</body>
+</html>

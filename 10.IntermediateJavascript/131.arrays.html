@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Code</title>
+</head>
+<body>
+<script>
+
+var guestList = ["Angela", "Cisol", "Jona", "Adam", "Manual", "Lalo"];
+
+var name = prompt("What is your name?");
+name = name.slice(0,1).toUpperCase() + name.slice(1,name.length).toLowerCase();
+
+if (guestList.includes(name)) {
+    alert("Welcome to the party!");
+} else {
+    alert("Sorry, you are not on the guest list");
+}
+
+</script>
+</body>
+</html>
